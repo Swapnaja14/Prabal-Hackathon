@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3vh;
+    color: #00b4d8;
+    font-family: Bebas Neue;
+    width: 95%;
+    background-color: #edf6f9;
+    margin: 30px auto;
+    padding: 2%;
+}
+
+.navbar h1 {
+    font-size: 7vh;
+}
+
+.navbar #hamburger {
+    font-size: 5vh;
+}
+.welcome-message p {
+    font-size: 4vh;
+    font-family: Itim;
+}
+
+.three-services-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.three-services h1 {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: Outfit;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+.service-1 {
+    background-color: #ffd60a;
+    /* height: 15vh; */
+    width: 30%;
+    padding: 1%;
+    border-radius: 13%;
+    font-family: Outfit;
+}
+
+.find-the-doctor-near-you #bigger {
+    font-size: 250%;
+}
+
+.find-the-doctor-near-you #smaller {
+    font-size: 150%;
+}
+
+.service-2 {
+    background-color: #a7c957;
+    /* height: 15vh; */
+    width: 30%;
+    padding: 1%;
+    border-radius: 13%;
+    font-family: Outfit;
+}
+
+.get-your-medical-reports #bigger {
+    font-size: 250%;
+}
+
+.get-your-medical-reports #smaller {
+    font-size: 150%;
+}
+
+.service-3 {
+    background-color: #cdb4db;
+    /* height: 15vh; */
+    width: 30%;
+    padding: 1%;
+    border-radius: 13%;
+    font-family: Outfit;
+}
+
+.doctor-log-advice #bigger {
+    font-size: 250%;
+}
+
+.doctor-log-advice #smaller {
+    font-size: 150%;
+}
+
+#right-arrow {
+    font-size: 200%;
+    margin-top: 10%;
+}
+
+
+.hospitals-and-bed-availibility h1 {
+    font-size: 3rem;
+}
+
