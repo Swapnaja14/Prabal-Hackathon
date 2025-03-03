@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="patient-records.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="signin-to-consult">
+        Sign in to Consult
+    </div>
+    <div class="doctor-hospital-name-date">
+        <form action="/action">
+            <label for="doctor-name">Doctor Name:*</label>
+            <input type="text" placeholder="e.g. Abu Saifuddin" id="doctor-name" name="doctor-name">
+            <br>
+            <label for="doctor-password">Doctor Password:*</label>
+            <input type= "password" placeholder="e.g. Abu@1234" id="doctor-password" name="doctor-password">
+            <br>
+            <label for="hospital-name">Hospital Name:*</label>
+            <input type="text" placeholder="e.g. Ruby Hall Clinic" id="hospital-name" name="hospital-name">
+            <br>
+            <label for="date">Date of Entry:*</label>
+            <input type="date" id="date" name="date">
+            <br>
+            <div class="form-buttons">
+                <button type="submit" id="submit">Submit</button>
+                <button type="reset" id="reset">Reset</button>
+            </div>
+            <div class="start">
+                <i class="fa-solid fa-circle-play"></i>Start
+            </div>
+        </form>
+    </div>
+
+    <div class="submitted-data">
+        <div class="patient-id">
+            Patient ID: RC12345ABABAB
+        </div>
+        <div class="doctor-name">
+            Dr. Abu Saifuddin
+        </div>
+        <div class="hospital-name">
+            Ruby Hall Clinic
+        </div>
+        <div class="date">
+            Date: 02/03/2025
+        </div>
+        <div class="buttons">
+            <button type="button" id="view">View</button>
+            <button type="button" id="edit">Edit</button>
+        </div>
+    </div>
+</body>
+</html>
