@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Recording Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RQE8fXJ7o3ow4Xr2kTSAz5Vmr6P5NNy5FT+Ql8K13oDID1O7j6ABsF39H2WI8r" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .record-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mic-container {
+            height: 300px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #ff6b6b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            transition: 0.5s;
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+                        0 1px 18px 0 rgba(0, 0, 0, 0.12),
+                        0 3px 5px -1px rgba(0, 0, 0, 0.2);
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .circle i {
+            color: white;
+            font-size: 30px;
+            transition: 0.9s;
+        }
+
+        .circle.active::before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: gray;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.2;
+            animation: bounce 0.8s ease-in-out infinite 0.5s;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.4);
+            }
+            75% {
+                transform: scale(1);
+            }
+        }
+
+        .timer {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .waveform {
+            width: 100%;
+            height: 50px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 50px;
+            margin-top: 20px;
+            border: 0;
+        }
+
+        .controls i {
+            font-size: 2rem;
+            color: #ff6b6b;
+            cursor: pointer;
+        }
+        button{
+            border-radius: 5px;
+            border-color: #f3eeee;
+        }
+        .name{
+            font-weight: 100;
+            font-size: small;
+            margin: 0;
+            padding: 0;
+            color: #686666;
+        }
+    </style>
+</head>
+<body>
+    <div class="record-container">
+        <div class="mic-container">
+            <div class="circle">
+                <i class="fa fa-microphone"></i>
+            </div>
+            <div class="timer">00:03.45</div>
+            <div class="waveform"></div>
+            <div class="controls">
+                <button class="play">
+                    <i class="fa fa-play"></i>
+                    <p class="name">Play</p>
+                </button>
+                <button class="pause">
+                    <i class="fa fa-pause"></i>
+                    <p class="name">Pause</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const micContainer = document.querySelector('.circle');
+        const playButton = document.querySelector('.play');
+        const pauseButton = document.querySelector('.pause');
+
+        playButton.addEventListener('click', () => {
+            micContainer.classList.add('active');
+        });
+
+        pauseButton.addEventListener('click', () => {
+            micContainer.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
